@@ -14,7 +14,8 @@ public class Score : MonoBehaviour
     {
         if(!Death.isDead)
         {
-            //highScore'i gecince skorun renginin yesil yanip sonmesi icin kullanilan kisim
+            //highscore'i gecince skorun renginin yesil yanip sonmesi icin kullanilan kisim
+            //highscore 0 ise textin rengi degismez
             if((int)score > PlayerPrefs.GetInt("HighScore") && PlayerPrefs.GetInt("HighScore") != 0)
             {
                 scoreText.color = Color.Lerp(Color.black, Color.green, Mathf.PingPong(Time.time, 1));
